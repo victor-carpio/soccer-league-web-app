@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- Favicon --->
+	<link rel="icon" sizes="192x192" href="icons/favicon.png" />
+	<link rel="apple-touch-icon" href="icons/favicon.png">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Font
+	<link href="https://fonts.googleapis.com/css?family=Nova+Script" rel="stylesheet"> -->
+	<!-- Normalize CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Initial view (No ZOOM) -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Hide the navigation bar of browser -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Style status bar (requires hide the navigation bar) -->
+	<meta name="theme-color" content="#4893CD">
+	<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+	<title>NYSL</title>
+</head>
+
+<body>
+	<!-- This div is to get all the content, and is no-wrap to get in the same line
+	all the content when we are showing 2 pages at the same time-->
+
+	<div id="wrapper" class="flex-row flex-no-wrap flex-center">
+		<!-- Principal-pages includes the menu page, about and sign in -->
+		<div id="principal-pages" class="flex-column flex-wrap flex-space-around">
+			<div id="principal-title" class="flex-row flex-no-wrap flex-space-around flex-align-items-center">
+				<img id="principal-logo" src="icons/principal-logo.png">
+				<!-- Principal title -->
+				<h1 id="principal-title">
+					<p>NYSL</p>
+				</h1>
+				<img id="principal2-logo" src="icons/principal2-logo.png">
+			</div>
+			<!-- Principal navbar which include Home/About/SignIn -->
+			<header id="principal-navbar" class="box-shadow">
+				<nav id="principal-navbar" class="flex-row flex-no-wrap flex-center">
+					<a id="home" class="button-menu">
+						<img class="icons-navbar" src="icons/home.png">
+					</a>
+					<a id="about" class="button-menu">
+						<img class="icons-navbar" src="icons/about.png">
+					</a>
+					<a id="sign-in" class="button-menu">
+						<img id="icon-sign-in" class="sign-in icons-navbar" src="icons/user.png">
+						<img id="icon-sign-out" class="sign-out icons-navbar" src="icons/user-in.png">
+					</a>
+				</nav>
+			</header>
+			<!-- Start the buttons of home menu -->
+			<div id="page-home" class="page">
+
+
+				<!-- Start of TEAMS -->
+				<div id="teams" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/football-shirt.png"> Teams</div>
+				</div>
+				<!-- Finish of TEAMS -->
+
+				<!-- Start of SCHEDULES -->
+				<div id="schedules" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/calendar2.png"> Schedules</div>
+				</div>
+				<!-- Finish of SCHEDULES -->
+
+				<!-- Start of RESULTS -->
+				<div id="results" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/trophy.png"> Results</div>
+				</div>
+				<!-- Finish of RESULTS -->
+							<!-- Start of AGENDA -->
+				<div id="agenda" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/ball.png"> Events</div>
+				</div>
+				<!-- Finish of AGENDA -->
+				<!-- Start of LOCATIONS -->
+				<div id="locations" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/location.png"> Locations</div>
+				</div>
+				<!-- End of LOCATIONS -->
+
+				<!-- Start of CHATS -->
+				<div id="chats" class="flex-column button-in button-style">
+					<div><img class="icon-menu-principal" src="icons/chats.png"> Chats</div>
+				</div>
+				<!-- End of CHATS -->
+
+				<!-- Finish the buttons of home menu -->
+			</div>
+			<!-- Start of About page -->
+			<div id="page-about" class="page display-none">
+				<h2 class="title-about">North Youth Soccer League</h2>
+				<p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat convallis iaculis. Nunc commodo lorem neque, vel porta metus consequat accumsan. Proin tristique ante quis facilisis ullamcorper. Curabitur turpis metus, finibus nec rutrum vel, facilisis vel metus. Aliquam posuere consectetur magna vitae laoreet.</p>
+			</div>
+			<!-- Finish of About page -->
+
+			<!-- Start of Sign In page -->
+			<div id="page-sign-in" class="page display-none">
+				<h2 class="button-style no-cursor">Sign In</h2>
+				<div class="box-sign-in">
+					<div id="sign-in-box" class="sign-in">
+						<label>Username:
+						<input id="input-user" class="input-text-sign-in" type="text">
+						</label>
+						<label>Password:
+						<input id="input-pass" class="input-text-sign-in" type="password">
+						</label>
+						<p id="guest-account">
+							<span class="sub-pages-margin"><b>User:</b> <i>guest@nysl.com</i></span>
+						  <span class="sub-pages-margin"><b>Pass:</b> <i>imguest</i></span>
+						 </p>
+						<div class="flex-row flex-space-around">
+							<div id="login-google" class="login">Log In with Google</div>
+							<div id="login" class="login">Log In</div>
+						</div>
+					</div>
+					<div id="sign-out-box" class="sign-out">
+						<div>You're already logged.</div>
+						<div id="logout">Log Out</div>
+						<div id="sign-out-info">
+							<p>Remember! Now you can chat!</p>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+			<!-- Finish of Sign In page -->
+
+			<!-- Start of FOOTER -->
+			<footer id="contacts" class="button-style no-cursor flex-row flex-space-around flex-no-wrap no-box-shadow">
+
+				<a href="https://www.facebook.com/groups/1687885664797977/" target="_blank">
+					<img class="button-contact" src="icons/facebook.png">
+				</a>
+				<a href="https://twitter.com/elmontyouth" target="_blank">
+					<img class="button-contact" src="icons/twitter.png">
+				</a>
+				<a href="https://www.instagram.com/usyouthsoccer/" target="_blank">
+					<img class="button-contact" src="icons/instagram.png">
+				</a>
+				<a href="https://es.pinterest.com/explore/youth-soccer/" target="_blank">
+					<img class="button-contact" src="icons/pinterest.png">
+					</a>
+				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@youthsoccerleague.com&su=MySubject&body=Comments" target="_blank">
+					<img class="button-contact" src="icons/mail.png">
+				</a>
+			</footer>
+			<!-- End of FOOTER -->
+			<!-- Bottom text -->
+			<p id="bottom-text">© 2017 North Youth Soccer League</p>
+			<!-- Finish principal pages -->
+		</div>
+
+		<!-- Start of Sub-Pages (Agenda, Teams, Schedules, Results, Locations) -->
+		<div id="left-hand-sub-pages" class="sub-pages">
+
+			<!-- Start of Sub-Page LOGO -->
+			<div id="page-logo" class="sub-page">
+				<img id="logo" src="icons/logo.png">
+			</div>
+			<!-- FInish of Sub-Page LOGO -->
+			<!-- Start of Sub-Page Agenda -->
+			<div id="page-agenda" class="sub-page">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="agenda" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Events</h1>
+					</nav>
+				</header>
+				<div class="flex-column flex-wrap flex-center">
+					<h2 id="901" class="button button-style">
+					<img class="icon-menu-principal" src="icons/event.png"> 9-01</h2>
+					<div id="901-in" class="button-style-in">
+						<h2 id="event-1" class="button sub-button-style">
+							9:30 - Eat Party For Loomies
+						</h2>
+						<div id="event-1-in" class="button-style-in">
+							<p>Pues haremos una barbacoa al lado del mar para tirar cohetes y bailar sardanas hasta el amanecer.</p>
+						</div>
+						<h2 id="event-2" class="button sub-button-style">
+							12:30 - Partents Match
+						</h2>
+						<div id="event-2-in" class="button-style-in">
+							<p>Haremos un partidillo a ver el que más goles marca.</p>
+						</div>
+					</div>
+
+					<h2 id="902" class="button button-style">
+					<img class="icon-menu-principal" src="icons/event.png"> 9-02</h2>
+					<div id="902-in" class="button-style-in">
+						<h2 id="event-3" class="button sub-button-style">
+							9:30 - Eat Party For Loomies
+						</h2>
+						<div id="event-3-in" class="button-style-in">
+							<p>Pues haremos una barbacoa al lado del mar para tirar cohetes y bailar sardanas hasta el amanecer.</p>
+						</div>
+						<h2 id="event-4" class="button sub-button-style">
+							12:30 - Partents Match
+						</h2>
+						<div id="event-4-in" class="button-style-in">
+							<p>Haremos un partidillo a ver el que más goles marca.</p>
+						</div>
+					</div>
+
+					<h2 id="903" class="button button-style">
+					<img class="icon-menu-principal" src="icons/event.png"> 9-03</h2>
+					<div id="903-in" class="button-style-in">
+						<h2 id="event-5" class="button sub-button-style">
+							9:30 - Eat Party For Loomies
+						</h2>
+						<div id="event-5-in" class="button-style-in">
+							<p>Pues haremos una barbacoa al lado del mar para tirar cohetes y bailar sardanas hasta el amanecer.</p>
+						</div>
+						<h2 id="event-6" class="button sub-button-style">
+							12:30 - Partents Match
+						</h2>
+						<div id="event-6-in" class="button-style-in">
+							<p>Haremos un partidillo a ver el que más goles marca.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of Sub-Page Agenda -->
+
+			<!-- Start of Sub-Page Teams -->
+			<div id="page-teams" class="sub-page">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="teams" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Teams</h1>
+					</nav>
+				</header>
+				<div class="flex-column flex-wrap flex-center">
+					<h2 id="u1" class="button button-style">
+					<img class="icon-menu-principal" src="icons/teams.png"> U1</h2>
+					<div id="u1-in" class="button-style-in">
+						<h2 id="players-u1" class="button sub-button-style">Players</h2>
+						<div id="players-u1-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>GK</td>
+										<td>Raquel</td>
+										<td>Cifuentes</td>
+									</tr>
+									<tr>
+										<td>DF</td>
+										<td>Maruti</td>
+										<td>Ruti</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Oruj</td>
+										<td>Medhi</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Edi</td>
+										<td>Narbuno</td>
+									</tr>
+									<tr>
+										<td>SK</td>
+										<td>Joan</td>
+										<td>Jamito</td>
+									</tr>
+									<tr>
+										<td>CH</td>
+										<td>Victor</td>
+										<td>Lomas</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h2 id="games-u1" class="button sub-button-style">Games</h2>
+						<div id="games-u1-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<h2 id="u2" class="button button-style">
+					<img class="icon-menu-principal" src="icons/teams.png"> U2</h2>
+					<div id="u2-in" class="button-style-in">
+						<h2 id="players-u2" class="button sub-button-style">Players</h2>
+						<div id="players-u2-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>GK</td>
+										<td>Raquel</td>
+										<td>Cifuentes</td>
+									</tr>
+									<tr>
+										<td>DF</td>
+										<td>Maruti</td>
+										<td>Ruti</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Oruj</td>
+										<td>Medhi</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Edi</td>
+										<td>Narbuno</td>
+									</tr>
+									<tr>
+										<td>SK</td>
+										<td>Joan</td>
+										<td>Jamito</td>
+									</tr>
+									<tr>
+										<td>CH</td>
+										<td>Victor</td>
+										<td>Lomas</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h2 id="games-u2" class="button sub-button-style">Games</h2>
+						<div id="games-u2-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<h2 id="u3" class="button button-style">
+					<img class="icon-menu-principal" src="icons/teams.png"> U3</h2>
+					<div id="u3-in" class="button-style-in">
+						<h2 id="players-u3" class="button sub-button-style">Players</h2>
+						<div id="players-u3-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>GK</td>
+										<td>Raquel</td>
+										<td>Cifuentes</td>
+									</tr>
+									<tr>
+										<td>DF</td>
+										<td>Maruti</td>
+										<td>Ruti</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Oruj</td>
+										<td>Medhi</td>
+									</tr>
+									<tr>
+										<td>MF</td>
+										<td>Edi</td>
+										<td>Narbuno</td>
+									</tr>
+									<tr>
+										<td>SK</td>
+										<td>Joan</td>
+										<td>Jamito</td>
+									</tr>
+									<tr>
+										<td>CH</td>
+										<td>Victor</td>
+										<td>Lomas</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h2 id="games-u3" class="button sub-button-style">Games</h2>
+						<div id="games-u3-in" class="button-style-in">
+							<table class="table-button-in ">
+								<tbody>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+									<tr>
+										<td>9/03</td>
+										<td>U1 vs U5</td>
+										<td>3 - 0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<!-- End of Sub-Pages Teams -->
+			</div>
+
+
+			<!-- Start of Sub-Page Schedule -->
+			<div id="page-schedules" class="sub-page schedules">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="schedules" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Schedules</h1>
+					</nav>
+				</header>
+				<div id="div-schedules" class="flex-column flex-wrap flex-center">
+
+				</div>
+			</div>
+			<!-- End of Sub-Page Schedule -->
+
+			<!-- Start of Sub-Page Results -->
+			<div id="page-results" class="sub-page">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="results" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Results</h1>
+					</nav>
+				</header>
+				<div class="flex-column flex-wrap flex-center">
+					<h2 id="clasification" class="button button-style">
+					<img class="icon-menu-principal" src="icons/medal.png"> Clasification</h2>
+					<div id="clasification-in" class="button-style-in">
+						<table class="table-button-in">
+							<thead>
+								<tr>
+									<th>Pos</th>
+									<th>Team</th>
+									<th>Won</th>
+									<th>Draw</th>
+									<th>Lost</th>
+									<th>Points</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>U2</td>
+									<td>3</td>
+									<td>1</td>
+									<td>3</td>
+									<td>8</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2 id="historical" class="button button-style">
+					<img class="icon-menu-principal" src="icons/historical.png"> Historical</h2>
+					<div id="historical-in" class="button-style-in">
+						<table class="table-button-in ">
+							<thead>
+								<tr>
+									<th>Day</th>
+									<th>Match</th>
+									<th>Score</th>
+									<th>Location</th>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+								<tr>
+									<td>9/04</td>
+									<td>U2 vs U3</td>
+									<td>3 - 0</td>
+									<td>Angmar</td>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- End of Sub-Page Results -->
+
+			<!-- Start of Sub-Page Locations -->
+			<div id="page-locations" class="sub-page">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="locations" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Locations</h1>
+					</nav>
+				</header>
+				<div id="div-locations" class="flex-column flex-wrap flex-center">
+
+				</div>
+			</div>
+			<!-- End of Sub-Page Locations -->
+
+			<!-- Start of Sub-Page Chats -->
+			<div id="page-chats" class="sub-page">
+				<header>
+					<nav id="secondary-navbar">
+						<a id="chats" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Chats</h1>
+					</nav>
+				</header>
+				<div id="div-chats" class="flex-column flex-wrap flex-center">
+
+				</div>
+			</div>
+			<!-- End of Sub-Page Chats -->
+
+			<!-- End of Sub-Pages (Agenda, Teams, Schedules, Results, Locations) -->
+		</div>
+
+		<!-- Start of Sub-Pages Right (Details) -->
+		<div id="right-hand-sub-pages" class="sub-pages">
+		<!-- Start of fixed header of details page -->
+			<header id="header-details" class="sub-page details">
+					<nav id="secondary-navbar">
+						<a id="details" class="button-back">
+							<img class="icon-back" src="icons/back.png"></a>
+						<h1>Details</h1>
+						<a id="details-notebook"><img class="background-color-inherit icon-back" src="icons/notebook.png"></a>
+					</nav>
+				</header>
+			<!-- End of fixed header of details page -->
+			<!-- Start of Sub-Page Details -->
+			<!-- End of Sub-Page Details -->
+			<!-- End of Sub-Pages Right (Details) -->
+		</div>
+		<!-- Finish wrapper -->
+	</div>
+	<!-- Main JavaScript -->
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- Firebase Script -->
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyA9FRsc0m2bCTcc_tHiZ1RzLduwsVmJZuw",
+			authDomain: "nysl-564e8.firebaseapp.com",
+			databaseURL: "https://nysl-564e8.firebaseio.com",
+			projectId: "nysl-564e8",
+			storageBucket: "nysl-564e8.appspot.com",
+			messagingSenderId: "707654027735"
+		};
+		firebase.initializeApp(config);
+
+	</script>
+</body>
+
+</html>
